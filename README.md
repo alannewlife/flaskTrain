@@ -10,3 +10,5 @@
 **4. docker-compose的练习**
 + mysql和redis的服务器，在compose中一键发布和启动
 + flask要跑起来的话，需要先启动这两个服务器
+
+
