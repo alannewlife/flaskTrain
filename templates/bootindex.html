@@ -1,0 +1,33 @@
+{% block styles %}
+    <!-- Bootstrap CSS -->
+    {{ bootstrap.load_css() }}
+{% endblock %}
+
+{% block content %}
+<div width="50%" class="container">
+<h4>@Based on Bootstrap</h4>
+<h1>一个简单的Redis累计功能。</h1>
+<h6>点击"learn more"按钮，计数不断累积。</h6>
+<h6><a href="{{ url_for('search') }}">Swith to searchpage!</a></h6>
+<div class="jumbotron">
+
+    <p>from redis:{{myintvar}}</p>
+    <p><a class="btn btn-primary btn-lg" href="#" role="button"  id="refresh-btn" >Learn more</a></p>
+  </div>    
+
+    
+{% endblock %}
+
+
+{% block scripts %}
+    <!-- Optional JavaScript -->
+    {{ bootstrap.load_js() }}
+
+    <script>
+        var refreshBtn = document.getElementById("refresh-btn");
+        refreshBtn.addEventListener("click", function() {
+            location.reload();
+        });
+    </script>
+{% endblock %}
+</div>  

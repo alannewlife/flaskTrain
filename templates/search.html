@@ -1,0 +1,36 @@
+    <!-- Bootstrap CSS -->
+    {{ bootstrap.load_css() }}
+    <div width="50%" class="container">
+        <h4>@Based on Bootstrap</h4>
+<h1>一个简单的检索功能，从mysql查询数据。</h1>
+<h6>检索内容设为：1，2，3</h6>
+<h6><a href="{{ url_for('rediscount') }}">Swith to counterpage!</a></h6>
+<hr>
+<form method="post">
+    <label for="grade">年级：</label>
+    <input type="text" name="grade" id="grade">
+    <button type="submit">检索</button>
+</form>
+
+{% if students %}
+<table class="table table-striped" >
+    <thead>
+      <tr>
+        <th scope="col">姓名</th>
+        <th scope="col">年龄</th>
+        <th scope="col">年级</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for student in students %}
+        <tr>
+            <td>{{ student.name }}</td>
+            <td>{{ student.age }}</td>
+            <td>{{ student.classno }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+
+{% endif %}
+</div>
