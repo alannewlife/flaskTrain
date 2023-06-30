@@ -1,0 +1,17 @@
+#基础
+flask
+
+#redis
+redis
+
+#mysql
+flask_sqlalchemy
+pymysql
+Bootstrap-Flask
+
+#运行环境
+cryptography
+gunicorn
+greenlet
+eventlet
+gevent
