@@ -1,4 +1,4 @@
-#基础
+#base
 flask
 
 #redis
@@ -9,7 +9,7 @@ flask_sqlalchemy
 pymysql
 Bootstrap-Flask
 
-#运行环境
+#web service
 cryptography
 gunicorn
 greenlet
