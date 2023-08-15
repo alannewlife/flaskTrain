@@ -1,4 +1,6 @@
 # flaskTrain
+### 通过一个简单的flask搭建的网页，熟悉docker的运用
+--    
 **1. flask的练习**
 + 两个页面，一个连接Mysql，一个连接redis
 + 导入了bootstrap来装饰页面  
