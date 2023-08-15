@@ -7,8 +7,21 @@
 **2. dockerfile的练习**
 + flask整体环境的自动打包发布
 
-**4. docker-compose的练习**
+**3. docker-compose的练习**
 + mysql和redis的服务器，在compose中一键发布和启动
 + flask要跑起来的话，需要先启动这两个服务器
 
 
+
+## docker启动
+
++ 本地调试启动flask: 
+>>> gunicorn -c gunicorn.conf.py start:app
++ 发布到docker
+
+
+>>> docker-compose up -d  
+>>> docker build -t 'testflask' .   
+>>> docker run -d --name flaskApp -p 8000:8000 testflask   
+>>> docker network connect fl_mynet flaskApp   
+>>> docker start flaskApp  
