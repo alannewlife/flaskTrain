@@ -2,11 +2,11 @@
 **1. flask的练习**
 + 两个页面，一个连接Mysql，一个连接redis
 + 导入了bootstrap来装饰页面  
-+ 如果本地开发调试，服务连接的字符串，需要改为localhost  
++ 如果本地开发调试，服务连接的字符串，需要改为localhost，打包发布则用服务器名。
     ```
     redis.StrictRedis(host="localhost", port=6379, db=0) <= start.py  
     SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:123456@localhost:3306/test' <= dbconfig.py
-+ 本地调试启动flask
++ 本地调试启动flask(先通过下方compose启动好服务器)
     ```
     gunicorn -c gunicorn.conf.py start:app  
 **2. docker-compose的练习**
