@@ -9,7 +9,7 @@ flask_sqlalchemy
 pymysql
 Bootstrap-Flask
 
-#web
+#web service
 cryptography
 gunicorn
 greenlet
