@@ -22,8 +22,8 @@
 **3. dockerfile**
 + flask整体环境的自动打包发布
     ```
-    docker build -t 'testflask' .   
-    docker run -d --name flaskApp -p 8000:8000 testflask   
-    docker network connect fl_mynet flaskApp   
+    docker build -t 'testflask' .   # flask web打包
+    docker run -d --name flaskApp -p 8000:8000 testflask   # 启动flask web  
+    docker network connect mynet flaskApp   # 连接到自定义的mynet网络
     docker start flaskApp  
     ```
